@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript DOM</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+    }
+
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+      color: #1a1a1a;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>JavaScript DOM</h1>
+  <section>
+    <button id="addNewItem">Add a New Item to the Shopping List</button>
+    <ul id="shoppingList">
+      <li>Bread</li>
+      <li>Milk</li>
+    </ul>
+  </section>
+
+  <script>
+    // Write a script to add new item `Eggs` to the given shopping list.
+    document.getElementById("addNewItem").addEventListener("click", function () {
+      const newItem = document.createElement("li");
+      newItem.textContent = "Eggs";
+      const shoppingList = document.getElementById("shoppingList");
+      shoppingList.appendChild(newItem);
+    });
+  </script>
+</body>
+
+</html>
