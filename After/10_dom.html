@@ -31,6 +31,16 @@
 
     <script>
       //display the pressed key (use keyup event)
+      const input = document.getElementById('inp')
+      input.addEventListener('keyup',(e)=>{
+        
+        const output = document.getElementById('output')
+        output.innerText = e.key
+
+      })
+
+
+
     </script>
   </body>
 </html>

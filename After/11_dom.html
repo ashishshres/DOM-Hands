@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+        background-color: #1a1a1a;
+        height: 100vh;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="box" style="width: 100px; height: 100px; background-color: red"></div>
+
+
+    <script>
+      const box = document.getElementById("box");
+
+      box.addEventListener("dblclick", () => {
+        console.log('double clicked');
+        
+        box.style.backgroundColor = getRandomColor();
+      });
+      function getRandomColor() {
+    return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0")}`;
+}
+    </script>
+  </body>
+</html>
